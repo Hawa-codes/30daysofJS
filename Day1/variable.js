@@ -1,10 +1,9 @@
-let city = 'Osun'         // capital city
-let isMarried = false // marital status
-
-let emptyValue = null // empty value
-
-let secondName
-console.log(secondName) // undefined
+// no 4
+let name = "Hawa";  // string
+let age = 22;  // number
+let isMarried = false; // boolean
+let state; // undefined
+let emptyValue = null; // empty value
 
 
 // no 6
@@ -35,13 +34,19 @@ let firstName = "Hawa";
 let lastName = "Adediran";
 let maritalStatus = "Single";
 let country = "Nigeria";
-let age = 20;
+let ageNumber = 20;
 
 console.log(firstName);
 console.log(lastName);
 console.log(maritalStatus);
 console.log(country);
 console.log(age);
+
+/*
+// no 9
+let firstName = "Hawa", lastName = "Adediran", maritalStatus = "Single", country = "Nigeria", age = 22;
+console.log(firstName, lastName, maritalStatus, country, age);
+*/
 
 // no 10
 let myAge = 22;
