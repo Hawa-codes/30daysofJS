@@ -1,15 +1,10 @@
 // no 5
-let name = "Hawa";  // string
-console.log(name); // Hawa
+console.log(typeof myName); // string
 
-let age = 22;  // number
-console.log(age); // 22
+console.log(typeof age); // number
 
-let isMarried = false; // boolean
-console.log(isMarried); // false
+console.log(typeof isMarried); // boolean
 
-let state; // undefined
-console.log(state); // undefined
+console.log(typeof state); // undefined
 
-let emptyValue = null; // empty value
-console.log(emptyValue); // null
+console.log(typeof emptyValue); // object

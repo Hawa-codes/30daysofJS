@@ -39,10 +39,15 @@ isMarried
 */
 
 // Exercise
-1. // comments can make code readable
-2. // Welcome to 30DaysOfJavaScript
-3. /* 
+// no 1
+// comments can make code readable
+// no 2
+// Welcome to 30DaysOfJavaScript
+// no 3
+/* 
 comments can make code readable, easy to reuse and informative
 */
-9. // let firstName = "Hawa", lastName = "Adediran", maritalStatus = "Single", country = "Nigeria", age = 22;
-console.log(firstName, lastName, maritalStatus, country, age);
+
+// no 9
+let ffirstName = "Hawa", llastName = "Adediran", mmaritalStatus = "married", ccountry = "Nigeria", aage = 22;
+console.log(ffirstName, llastName, mmaritalStatus, ccountry, aage);

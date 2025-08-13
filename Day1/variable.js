@@ -1,5 +1,5 @@
 // no 4
-let name = "Hawa";  // string
+let myName = "Hawa";  // string
 let age = 22;  // number
 let isMarried = false; // boolean
 let state; // undefined
@@ -42,11 +42,11 @@ console.log(maritalStatus);
 console.log(country);
 console.log(age);
 
-/*
+
 // no 9
-let firstName = "Hawa", lastName = "Adediran", maritalStatus = "Single", country = "Nigeria", age = 22;
-console.log(firstName, lastName, maritalStatus, country, age);
-*/
+let firstNamee = "Hawa", lastNamee = "Adediran", maritalStatuss = "Single", countryy = "Nigeria", agee = 22;
+console.log(firstNamee, lastNamee, maritalStatuss, countryy, agee);
+
 
 // no 10
 let myAge = 22;
