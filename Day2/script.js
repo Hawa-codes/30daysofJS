@@ -1,63 +1,87 @@
 // Exercise Level 1
-// no 1
+// no 1 Declare a variable named challenge and assign it to an initial value '30 Days Of JavaScript'.
 let challenge = '30 Days Of JavaScript';
-// no 2
+
+// no 2 Print the string on the browser console using console.log()
 console.log(challenge);  //  30 Days Of JavaScript
-// no 3
+
+// no 3 Print the length of the string on the browser console using console.log(
 console.log(challenge.length);  // 21
-// no 4
+
+// no 4 Change all the string characters to capital letters using toUpperCase() method
 console.log(challenge.toUpperCase());  //  30 DAYS OF JAVASCRIPT
-// no 5
+
+// no 5 Change all the string characters to lowercase letters using toLowerCase() method
 console.log(challenge.toLowerCase());  //  30 days of javascript
-// no 6
+
+// no 6 Cut (slice) out the first word of the string using substr() or substring() method
 console.log(challenge.substring(0, 2));  //  30
 console.log(challenge.substr(0, 2));  //  30
-// no 7
+
+// no 7 Slice out the phrase Days Of JavaScript from 30 Days Of JavaScript.
 console.log(challenge.substring(3, 21));  //  Days Of JavaScript
-// no 8
+
+// no 8 Check if the string contains a word Script using includes() method
 console.log(challenge.includes('Script'));  //  true
-// no 9
+
+// no 9 Split the string into an array using split() method
 console.log(challenge.split());  //  ['30 Days Of JavaScript']
-// no 10
+
+// no 10 Split the string 30 Days Of JavaScript at the space using split() method
 console.log(challenge.split(' '));  //  ['30', 'Days', 'Of', 'JavaScript']
 
 let name = 'Hawa, Aderinsola, Adewumi, Adebola';
 console.log(name.split(', '));  // ['Hawa', 'Aderinsola', 'Adewumi', 'Adebola']
 console.log(name.split(','));  // ['Hawa', ' Aderinsola', ' Adewumi', ' Adebola']
-// no 11
+
+// no 11 'Facebook, Google, Microsoft, Apple, IBM, Oracle, Amazon' split the string at the comma and change it to an array.
 let app = 'Facebook, Google, Microsoft, Apple, IBM, Oracle, Amazon';
 console.log(app.split(', '));  // ['Facebook', 'Google', 'Microsoft', 'Apple', 'IBM', 'Oracle', 'Amazon']
 console.log(app.split(','));  // ['Facebook', ' Google', ' Microsoft', ' Apple', ' IBM', ' Oracle', ' Amazon']
-// no 12
+
+// no 12 Change 30 Days Of JavaScript to 30 Days Of Python using replace() method.
 console.log(challenge.replace('30 Days Of JavaScript', '30 Days Of Python'));  //30 Days Of Python
-// no 13
+
+// no 13 What is character at index 15 in '30 Days Of JavaScript' string? Use charAt() method.
 console.log(challenge.charAt(15));   // S
-// no 14
+
+// no 14 What is the character code of J in '30 Days Of JavaScript' string using charCodeAt()
 console.log(challenge.charCodeAt(11));  // J  74
-// no 15
+
+// no 15 Use indexOf to determine the position of the first occurrence of a in 30 Days Of JavaScript
 console.log(challenge.indexOf('a')); // 4
-// no 16
+
+// no 16 Use lastIndexOf to determine the position of the last occurrence of a in 30 Days Of JavaScript.
 console.log(challenge.lastIndexOf('a'));  // 14
-// no 17
+
+// no 17 Use indexOf to find the position of the first occurrence of the word because in the following sentence:'You cannot end a sentence with because because because is a conjunction'
 let sentence = 'You cannot end a sentence with because because because is a conjunction';
 console.log(sentence.indexOf('because'));  // 31
-// no 18
+
+// no 18 Use lastIndexOf to find the position of the last occurrence of the word because in the following sentence:'You cannot end a sentence with because because because is a conjunction'
 console.log(sentence.lastIndexOf('because'));  //47
-// no 19
+
+// no 19 Use search to find the position of the first occurrence of the word because in the following sentence:'You cannot end a sentence with because because because is a conjunction'
 console.log(sentence.search('because'));  //31
-// no 20 
+
+// no 20 Use trim() to remove any trailing whitespace at the beginning and the end of a string.E.g ' 30 Days Of JavaScript '.
 let challenges = ' 30 Days Of JavaScript ';
 console.log(challenges.trim(' '));   // 30 Days Of JavaScript
-// no 21
+
+// no 21 Use startsWith() method with the string 30 Days Of JavaScript and make the result true
 console.log(challenge.startsWith('30'));  // true
-// no 22
+
+// no 22 Use endsWith() method with the string 30 Days Of JavaScript and make the result true
 console.log(challenge.endsWith('JavaScript'));  // true
-// no 23
+
+// no 23 Use match() method to find all the a’s in 30 Days Of JavaScript
 console.log(challenge.match(/a/g));  // ['a', 'a', 'a']
-// no 24
+
+// no 24 Use concat() and merge '30 Days of' and 'JavaScript' to a single string, '30 Days Of JavaScript'
 let string = '30 Days of';
 console.log(string.concat(' JavaScript')); //  30 Days of JavaScript
-// no 25
+
+// no 25 Use repeat() method to print 30 Days Of JavaScript 2 times
 console.log(challenge.repeat(2));  // 30 Days Of JavaScript30 Days Of JavaScript
 
 
