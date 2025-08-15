@@ -147,6 +147,38 @@ console.log(timee.getTime());  // 1755286300084
 // no 1 Write a script that prompt the user to enter base and height of the triangle and calculate an area of a triangle (area = 0.5 x b x h).
 let base = prompt();
 let height = prompt();
+base = Number(base);
+height = Number(height);
 
 let area = (0.5 * base * height);
-console.log(area);   // 0
+console.log(area);  // 0
+
+// no 2 Write a script that prompt the user to enter side a, side b, and side c of the triangle and and calculate the perimeter of triangle (perimeter = a + b + c)
+let  a = 5;
+let  b = 4;
+let c = 3;
+let  perimeter = (a + b + c);
+console.log(perimeter);  // 12
+
+// no 3 Get length and width using prompt and calculate an area of rectangle (area = length x width and the perimeter of rectangle (perimeter = 2 x (length + width))
+let length = 5;
+let width = 4;
+let periimeter = 2 * (length + width);
+let areea = length * width;
+console.log(periimeter);  // 18
+console.log(areea);  // 20
+// let areaa = length * width   (perimeter = 2 * (length + width));
+
+// no 4 Get radius using prompt and calculate the area of a circle (area = pi x r x r) and circumference of a circle(c = 2 x pi x r) where pi = 3.14.
+let radius = prompt(5);
+const pi = 3.14;
+let areaa = pi * radius * radius;
+let circumference = 2 * pi * radius;
+console.log(areaa);  // 
+console.log(circumference);  // 
+
+// no 5 Calculate the slope, x-intercept and y-intercept of y = 2x -2
+/*
+let x = 2;
+let y = 2x -2;
+*/
