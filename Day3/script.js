@@ -178,7 +178,33 @@ console.log(areaa);  //
 console.log(circumference);  // 
 
 // no 5 Calculate the slope, x-intercept and y-intercept of y = 2x -2
-/*
-let x = 2;
-let y = 2x -2;
-*/
+let slope1 = 2;  
+let yIntercept = -2;  
+let xIntercept = 1;  
+
+console.log("Slope =", slope1);  // Slope = 2
+console.log("y-intercept = (0," + yIntercept + ")");   // y-intercept = (0,-2)
+console.log("x-intercept = (" + xIntercept + ",0)");   // x-intercept = (1,0)
+
+// no 6 Slope is m = (y2-y1)/(x2-x1). Find the slope between point (2, 2) and point(6,10)
+let x1 = 2, y1 = 2;
+let x2 = 6, y2 = 10;
+let slope2 = (y2 - y1) / (x2 - x1);
+console.log("Slope between (2,2) and (6,10) =", slope2);  // Slope between (2,2) and (6,10) = 2
+
+
+//  no 7 Compare the slope of above two questions.
+if (slope1 === slope2) {
+  console.log("Both slopes are equal. The line and the points lie on the same line.");
+} else {
+  console.log("The slopes are different.");
+}
+
+// no 8 Calculate the value of y (y = x2 + 6x + 9). Try to use different x values and figure out at what x value y is 0.
+function quadratic(x) {
+  return x * x + 6 * x + 9;  // this means x² + 6x + 9
+}
+
+console.log("When x = -5, y =", quadratic(-5));
+console.log("When x = -3, y =", quadratic(-3));
+console.log("When x = 0, y =", quadratic(0));
