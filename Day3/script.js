@@ -199,7 +199,7 @@ if (slope1 === slope2) {
 } else {
   console.log("The slopes are different.");
 }
-
+/*
 // no 8 Calculate the value of y (y = x2 + 6x + 9). Try to use different x values and figure out at what x value y is 0.
 function quadratic(x) {
   return x * x + 6 * x + 9;  // this means x² + 6x + 9
@@ -208,3 +208,65 @@ function quadratic(x) {
 console.log("When x = -5, y =", quadratic(-5));
 console.log("When x = -3, y =", quadratic(-3));
 console.log("When x = 0, y =", quadratic(0));
+*/
+
+// no 9  Writ a script that prompt a user to enter hours and rate per hour. Calculate pay of the person?
+let hours = prompt("Enter hours:");        
+let rate = prompt("Enter rate per hour:"); 
+
+hours = Number(hours);
+rate = Number(rate);
+let pay = hours * rate;
+console.log(pay);
+
+// no 10 If the length of your name is greater than 7 say, your name is long else say your name is short.
+let name = prompt("Enter your name:"); 
+
+if(name.length > 7){
+    console.log("Your name is long");
+} else {
+    console.log("Your name is short");
+}
+
+// no 11  Compare your first name length and your family name length and you should get this output.
+let firrstName = 'Adebolanle';
+let lasstName = 'Adediran';
+
+if(firrstName.length > lasstName.length){
+    console.log(`Your first name, ${firrstName} is longer than your family name, ${lasstName}`);
+} else if(firrstName.length < lasstName.length){
+    console.log(`Your family name, ${lasstName} is longer than your first name, ${firrstName}`);
+} else {
+    console.log(`Your first name and family name are the same length`);
+}
+
+// no 12  Declare two variables _myAge_ and _yourAge_ and assign them initial values and myAge and yourAge.
+let myAge = 250;
+let yourAge = 25;
+
+let ageDiff = myAge - yourAge;
+console.log(`I am ${ageDiff} years older than you.`);
+
+//  no 13 Using prompt get the year the user was born and if the user is 18 or above allow the user to drive if not tell the user to wait a certain amount of years.
+let birthYear = prompt("Enter your birth year:");
+birthYear = Number(birthYear);
+
+let drivingAge = 18;
+let currentYear = new Date().getFullYear();
+let agge = currentYear - birthYear;
+
+if(age >= drivingAge){
+    console.log(`You are ${age} years old. You are ${drivingAge} or above, you can drive.`);
+} else {
+    let waitYears = drivingAge - age;
+    console.log(`You are ${age} years old. You need to wait ${waitYears} more year(s) to drive.`);
+}
+
+
+/*
+Enter birth year: 1995
+You are 25. You are old enough to drive
+
+Enter birth year: 2005
+You are 15. You will be allowed to drive after 3 years.
+*/
