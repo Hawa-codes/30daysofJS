@@ -248,25 +248,46 @@ let ageDiff = myAge - yourAge;
 console.log(`I am ${ageDiff} years older than you.`);
 
 //  no 13 Using prompt get the year the user was born and if the user is 18 or above allow the user to drive if not tell the user to wait a certain amount of years.
-let birthYear = prompt("Enter your birth year:");
+let birthYear = Number(prompt("Enter your birth year:"));
 birthYear = Number(birthYear);
 
 let drivingAge = 18;
 let currentYear = new Date().getFullYear();
 let agge = currentYear - birthYear;
 
-if(age >= drivingAge){
-    console.log(`You are ${age} years old. You are ${drivingAge} or above, you can drive.`);
-} else {
+if(agge >= drivingAge){
+    console.log(`You are ${agge} years old. You are ${drivingAge} or above, you can drive.`); // You are 2025 years old. You are 18 or above, you can drive.
+} else { 
     let waitYears = drivingAge - age;
-    console.log(`You are ${age} years old. You need to wait ${waitYears} more year(s) to drive.`);
+    console.log(`You are ${agge} years old. You need to wait ${waitYears} more year(s) to drive.`);
 }
 
+// no 14 Write a script that prompt the user to enter number of years. Calculate the number of seconds a person can live. Assume some one lives just hundred years
+let years = prompt("Enter number of years you live:");
+years = Number(years);
+let seconds = years * 365 * 24 * 60 * 60;
+console.log(`You lived ${seconds} seconds.`);   // You lived 567648000 seconds.
 
-/*
-Enter birth year: 1995
-You are 25. You are old enough to drive
+// no 15 Create a human readable time format using the Date time object
+let nnow = new Date();
+function pad(num) {
+    return num.toString().padStart(2, '0');
+}
+let yeear = nnow.getFullYear();
+let month = pad(nnow.getMonth() + 1); 
+let day = pad(nnow.getDate());
+let hoours = pad(nnow.getHours());
+let minutes = pad(nnow.getMinutes());
 
-Enter birth year: 2005
-You are 15. You will be allowed to drive after 3 years.
-*/
+// YYYY-MM-DD HH:mm
+let format1 = `${yeear}-${month}-${day} ${hoours}:${minutes}`;
+
+// DD-MM-YYYY HH:mm
+let format2 = `${day}-${month}-${yeear} ${hoours}:${minutes}`;
+
+// DD/MM/YYYY HH:mm
+let format3 = `${day}/${month}/${yeear} ${hoours}:${minutes}`;
+
+console.log("YYYY-MM-DD HH:mm:", format1);  // YYYY-MM-DD HH:mm: 2025-08-18 09:19
+console.log("DD-MM-YYYY HH:mm:", format2);
+console.log("DD/MM/YYYY HH:mm:", format3);
