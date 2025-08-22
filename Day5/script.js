@@ -256,7 +256,7 @@ range = maxAge - minAge
 console.log(range);  // 7
 
 //  .Slice the first ten countries from the countries array
-const countries = [
+const countrries = [
   'Afghanistan',
   'Albania',
   'Algeria',
