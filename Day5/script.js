@@ -265,5 +265,7 @@ const countrries = [
   'Antigua and Barbuda',
   'Argentina',
   'Armenia',
-  'Australia']
+  'Australia',
+  "Nigeria"
+]
 
