@@ -41,3 +41,25 @@ function volumeOfRectPrism(length, width, height) {
 console.log(volumeOfRectPrism(3, 3, 3)); // 27
 
 // no 7 Area of a circle is calculated as follows: area = π x r x r. Write a function which calculates areaOfCircle
+function areaOfCircle(r) {
+    return  Math.PI * r * r
+}
+console.log(areaOfCircle(2)); // 12.566370614359172
+
+// no 8 Circumference of a circle is calculated as follows: circumference = 2πr. Write a function which calculates circumOfCircle
+function circumOfCircle(r) {
+    return  2 *Math.PI * r
+}
+console.log(areaOfCircle(3));  // 28.274333882308138
+
+// no 9 Density of a substance is calculated as follows:density= mass/volume. Write a function which calculates density.
+function density(mass, volume) {
+    return  mass / volume
+}
+console.log(density(8, 2));  // 4
+
+// no 10 Speed is calculated by dividing the total distance covered by a moving object divided by the total amount of time taken. Write a function which calculates a speed of a moving object, speed.
+function Speed(distance, time) {
+    return  distance / time
+}
+console.log(Speed(80, 2));  // 40 
