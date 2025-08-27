@@ -63,3 +63,36 @@ function Speed(distance, time) {
     return  distance / time
 }
 console.log(Speed(80, 2));  // 40 
+
+// no 11 Weight of a substance is calculated as follows: weight = mass x gravity. Write a function which calculates weight.
+function Weight(mass, gravity = 9.81) {
+    return  mass * gravity
+}
+console.log(Weight(8));  // 78.48
+
+// no 12 Temperature in oC can be converted to oF using this formula: oF = (oC x 9/5) + 32. Write a function which convert oC to oF convertCelsiusToFahrenheit.
+function convertCelsiusToFahrenheit(oC) {
+    return  (oC * 9/5) + 32
+}
+console.log(convertCelsiusToFahrenheit(100));  // 212
+
+// no 13 Body mass index(BMI) is calculated as follows: bmi = weight in Kg / (height x height) in m2. Write a function which calculates bmi. BMI is used to broadly define different weight groups in adults 20 years old or older.Check if a person is underweight, normal, overweight or obese based the information given below.
+function bmi(weight, height) {
+    const value = weight / (height * height);
+
+    if (value < 18.5) {
+    return "Underweight";
+  } else if (value >= 18.5 && value <= 24.9) {
+    return "Normal weight";
+  } else if (value >= 25 && value <= 29.9) {
+    return "Overweight";
+  } else {
+    return "Obese";
+  }
+}
+
+// Underweight: BMI is less than 18.5
+console.log(bmi(3, 6)); // Underweight
+console.log(bmi(70, 1.75));  // Normal weight
+console.log(bmi(90, 1.7));   // Obese
+console.log(bmi(3, 6));
