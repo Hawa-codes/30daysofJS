@@ -95,4 +95,56 @@ function bmi(weight, height) {
 console.log(bmi(3, 6)); // Underweight
 console.log(bmi(70, 1.75));  // Normal weight
 console.log(bmi(90, 1.7));   // Obese
-console.log(bmi(3, 6));
+console.log(bmi(90, 1.8));   // Overweight 
+
+// no 14 Write a function called checkSeason, it takes a month parameter and returns the season:Autumn, Winter, Spring or Summer.
+function checkSeason(month) {
+    month = month.toLowerCase();
+    const autumn = ["september", "october", "november"];
+    const winter = ["december", "january", "february"];
+    const spring = ["march", "april", "may"];
+    const summer = ["june", "july", "august"];
+
+    if (autumn.includes(month)) {
+    return "Autumn";
+  } else if (winter.includes(month)) {
+    return "Winter";
+  } else if (spring.includes(month)) {
+    return "Spring";
+  } else if (summer.includes(month)) {
+    return "Summer";
+  } else {
+    return "Invalid month";
+  }
+}
+
+console.log(checkSeason('March'));  // spring
+
+// no 15 Math.max returns its largest argument. Write a function findMax that takes three arguments and returns their maximum with out using Math.max method.
+function findMax(a, b, c) {
+    let max = a;   // assume a is the largest
+
+    if (b > max) {
+        max = b;
+    }
+    if (c > max) {
+        max = c;
+    }
+
+    return max;
+}
+
+console.log(findMax(10, 5, 7));   // Output: 10
+console.log(findMax(3, 20, 15));  // Output: 20
+console.log(findMax(-5, -2, -10)); // Output: -2
+
+
+// Exercises: Level 2
+// no 1 Linear equation is calculated as follows: ax + by + c = 0. Write a function which calculates value of a linear equation, solveLinEquation.
+function solveLinEquation(a, x, b, y, c) {
+    let equation = (a * x + b * y + c === 0);
+    return equation
+}
+
+console.log(solveLinEquation(2, 3, 2, 2, 3)); // false
+console.log(solveLinEquation(2, 0, 2, 0, 0)); // true
