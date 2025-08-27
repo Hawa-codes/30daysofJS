@@ -142,9 +142,44 @@ console.log(findMax(-5, -2, -10)); // Output: -2
 // Exercises: Level 2
 // no 1 Linear equation is calculated as follows: ax + by + c = 0. Write a function which calculates value of a linear equation, solveLinEquation.
 function solveLinEquation(a, x, b, y, c) {
-    let equation = (a * x + b * y + c === 0);
+    let equation = (a * x + b * y + c);
     return equation
 }
 
-console.log(solveLinEquation(2, 3, 2, 2, 3)); // false
-console.log(solveLinEquation(2, 0, 2, 0, 0)); // true
+console.log(solveLinEquation(2, 3, 2, 2, 3)); // 13
+console.log(solveLinEquation(2, 0, 2, 4, 0)); // 8
+
+// **no 2 Quadratic equation is calculated as follows: ax2 + bx + c = 0. Write a function which calculates value or values of a quadratic equation, solveQuadEquation.
+function solveQuadEquation(a, x, b, c) {
+    let equation = (a * (x ** 2) + b * x + c);
+    return equation
+}
+
+console.log(solveQuadEquation(2, 3, 10, 12)); // 60
+
+// no 3 Declare a function name printArray. It takes array as a parameter and it prints out each value of the array.
+function printArray(array) {
+    for (let i = 0; i < array.length; i++) {
+        console.log(array[i]);
+    }
+}
+printArray([1, 2, 3, 4, 5]);
+
+// no 4 Write a function name showDateTime which shows time in this format: 08/01/2020 04:08 using the Date object.
+function showDateTime() {
+    const now = new Date();
+
+    let day = now.getDate();
+    let month = now.getMonth() + 1; // Months are 0-indexed
+    let year = now.getFullYear();
+
+    let hours = now.getHours();
+    let minutes = now.getMinutes();
+
+    day = day < 10 ? "0" + day : day;
+    month = month < 10 ? "0" + month : month;
+    hours = hours < 10 ? "0" + hours : hours;
+    minutes = minutes < 10 ? "0" + minutes : minutes;
+
+    console.log(`${day}/${month}/${year} ${hours}:${minutes}`);
+}
