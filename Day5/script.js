@@ -9,17 +9,15 @@ let numbers = [10, 15, 20, 25, 30, 35, 40];
 console.log("Length of numbers:", numbers.length);
 
 // no 4 Get the first item, the middle item and the last item of the array
-let firstItem = numbers[0];
-let middleItem = numbers[Math.floor(numbers.length / 2)];
-let lastItem = numbers[numbers.length - 1];
-console.log("First:", firstItem);
-console.log("Middle:", middleItem);
-console.log("Last:", lastItem);
+console.log(numbers[0]); // first item  10
+console.log(numbers[3]); // middleItem  25
+let lastIndex = numbers.length - 1
+console.log(numbers[lastIndex]); // lastItem 40
 
 // no 5 Declare an array called mixedDataTypes, put different data types in the array and find the length of the array. The array size should be greater than 5
 let mixedDataTypes = [42, "hello", true, null, { name: "Hawa" }, [1, 2, 3]];
-console.log("mixedDataTypes:", mixedDataTypes);
-console.log("Length:", mixedDataTypes.length);
+console.log(mixedDataTypes);
+console.log("Length:", mixedDataTypes.length);  // 6
 
 // no 6 Declare an array variable name itCompanies and assign initial values Facebook, Google, Microsoft, Apple, IBM, Oracle and Amazon
 let itCompanies = ["Facebook", "Google", "Microsoft", "Apple", "IBM", "Oracle", "Amazon"];
@@ -28,7 +26,7 @@ let itCompanies = ["Facebook", "Google", "Microsoft", "Apple", "IBM", "Oracle", 
 console.log(itCompanies);
 
 // no 8 Print the number of companies in the array
-console.log("Number of companies:", itCompanies.length);
+console.log(itCompanies.length);  // 7
 
 // no 9 Print the first company, middle and last company
 console.log("First company:", itCompanies[0]); // Facebook
@@ -36,13 +34,13 @@ console.log("Middle company:", itCompanies[4]); // Apple
 console.log("Last company:", itCompanies[itCompanies.length - 1]);  // Amazon
 
 // no 10 Print out each company
-console.log("First company:", itCompanies[0]);
-console.log("First company:", itCompanies[1]);
-console.log("First company:", itCompanies[2]);
-console.log("First company:", itCompanies[3]);
-console.log("First company:", itCompanies[4]);
-console.log("First company:", itCompanies[5]);
-console.log("First company:", itCompanies[6]);
+console.log(itCompanies[0]);
+console.log(itCompanies[1]);
+console.log(itCompanies[2]);
+console.log(itCompanies[3]);
+console.log(itCompanies[4]);
+console.log(itCompanies[5]);
+console.log(itCompanies[6]);
 
 // no 11 Change each company name to uppercase one by one and print them out
 console.log(itCompanies[0].toUpperCase()); 
@@ -64,36 +62,59 @@ if (itCompanies.includes(company)) {
 } else {
   console.log("Company is not found");
 }
-// no 14 Filter out companies which have more than one 'o' without the filter method
+
+// **no 14 Filter out companies which have more than one 'o' without the filter method
+for (let i = 0; i < itCompanies.length; i++) {
+  let company = itCompanies[i];
+  
+  let count = 0;
+  for (let j = 0; j < company.length; j++) {
+    if (company[j].toLowerCase() === 'o') {
+      count++;
+    }
+  }
+
+  if (count > 1) {
+    console.log(company); 
+  }
+}
+
 // no 15 Sort the array using sort() method
 itCompanies.sort()
-console.log(itCompanies);
+console.log(itCompanies);  // ['Amazon', 'Apple', 'Facebook', 'Google', 'IBM', 'Microsoft', 'Oracle']
 
 // no 16 Reverse the array using reverse() method
 itCompanies.reverse()
-console.log(itCompanies);
+console.log(itCompanies);  // ['Oracle', 'Microsoft', 'IBM', 'Google', 'Facebook', 'Apple', 'Amazon']
 
 // no 17 Slice out the first 3 companies from the array
-console.log(itCompanies.slice(3,7));
+console.log(itCompanies.slice(3,7));  //  ['Google', 'Facebook', 'Apple', 'Amazon']
 
 // no 18 Slice out the last 3 companies from the array
-console.log(itCompanies.slice(0,4));
+console.log(itCompanies.slice(0,4));  //  ['Oracle', 'Microsoft', 'IBM', 'Google']
 
 // no 19 Slice out the middle IT company or companies from the array
-console.log(itCompanies.slice(3,4)); 
+console.log(itCompanies.slice(3,4));  // ['Google']
 
 // no 20 Remove the first IT company from the array
-itCompanies.shift();
-console.log(itCompanies);
+let itCompannies = ["Facebook", "Google", "Microsoft", "Apple", "IBM", "Oracle", "Amazon"];
+itCompannies.shift();
+console.log(itCompannies);  // ['Google', 'Microsoft', 'Apple', 'IBM', 'Oracle', 'Amazon']
 
-// no 21 Remove the middle IT company or companies from the array
+// **no 21 Remove the middle IT company or companies from the array
+let itCompaniies = ["Facebook", "Google", "Microsoft", "Apple", "IBM", "Oracle", "Amazon"];
+itCompaniies.shift();
+console.log(itCompaniies[3]); // IBM
+
 // no 22 Remove the last IT company from the array
-itCompanies.pop();
-console.log(itCompanies);
+let itCompaniees = ["Facebook", "Google", "Microsoft", "Apple", "IBM", "Oracle", "Amazon"];
+itCompaniees.pop();
+console.log(itCompaniees);  // ['Facebook', 'Google', 'Microsoft', 'Apple', 'IBM', 'Oracle']
 
 // no 22 Remove all IT companies
-itCompanies = [];
-console.log(itCompanies);
+let itComppaniees = ["Facebook", "Google", "Microsoft", "Apple", "IBM", "Oracle", "Amazon"];
+itComppanies = [];
+console.log(itComppanies);  // []
 
 // Exercise: Level 2 
 // no 1 Create a separate countries.js file and store the countries array in to this file, create a separate file web_techs.js and store the webTechs array in to this file. Access both file in main.js file
@@ -106,77 +127,16 @@ console.log(cText);  // I love teaching and empowering people I teach HTML CSS J
 
 // change the string to array
 let words = cText.split(' ')
-console.log(words);
-/*
-(13) ['I', 'love', 'teaching', 'and', 'empowering', 'people', 'I', 'teach', 'HTML', 'CSS', 'JS', 'React', 'Python']
-0
-: 
-"I"
-1
-: 
-"love"
-2
-: 
-"teaching"
-3
-: 
-"and"
-4
-: 
-"empowering"
-5
-: 
-"people"
-6
-: 
-"I"
-7
-: 
-"teach"
-8
-: 
-"HTML"
-9
-: 
-"CSS"
-10
-: 
-"JS"
-11
-: 
-"React"
-12
-: 
-"Python"
-length
-: 
-13
-*/
+console.log(words);   // ['I', 'love', 'teaching', 'and', 'empowering', 'people', 'I', 'teach', 'HTML', 'CSS', 'JS', 'React', 'Python']
 
 // n0 3 In the following shopping cart add, remove, edit items
 const shoppingCart = ['Milk', 'Coffee', 'Tea', 'Honey'];
 shoppingCart.unshift('Meat')
-console.log(shoppingCart);
-/*
-0
-: 
-"Meat"
-1
-: 
-"Milk"
-2
-: 
-"Coffee"
-3
-: 
-"Tea"
-4
-: 
-"Honey"
-length
-: 
-5
-*/
+console.log(shoppingCart);  // ['Meat', 'Milk', 'Coffee', 'Tea', 'Honey']
+
+const shoppiingCart = ['Milk', 'Coffee', 'Tea', 'Honey'];
+shoppiingCart.push('fish')
+console.log(shoppiingCart); // ['Milk', 'Coffee', 'Tea', 'Honey', 'fish']
 
 // no 3 add Sugar at the end of you shopping cart if it has not been already added
 const shoppinggCart = ['Milk', 'Coffee', 'Tea', 'Honey'];
@@ -190,7 +150,7 @@ const shoppinngCart = ['Milk', 'Coffee', 'Tea', 'Honey'];
 shoppinngCart.pop('Honey') 
 console.log(shoppinngCart);  // ['Milk', 'Coffee', 'Tea']
 
-// no 3 modify Tea to 'Green Tea'
+// **no 3 modify Tea to 'Green Tea'
 const teaIndex = shoppingCart.indexOf('Tea');
 if (teaIndex !== -1) {
   shoppingCart[teaIndex] = 'Green Tea';
@@ -224,17 +184,16 @@ console.log(fullStack);  // ['HTML', 'CSS', 'JS', 'React', 'Redux', 'Node', 'Exp
 // Exercise: Level 3
 // Sort the array and find the min and max age
 const ages = [19, 22, 19, 24, 20, 25, 26, 24, 25, 24]
-ages.sort((a, b) => a - b);
-const minAge = ages[0];
-const maxAge = ages[ages.length - 1];
+ages.sort();
+console.log(ages); 
 
-console.log('Sorted ages:', ages);
-console.log('Min age:', maxAge);  // 19
-console.log('Max age:', maxAge);  // 26
+console.log('Min age:',ages[0]);  // 19
+let lastInde = ages.length - 1;
+console.log('Max age:',ages[lastInde]);  // 26
 
 // Find the median age(one middle item or two middle items divided by two)
 // const agees = [19, 22, 19, 24, 20, 25, 26, 24, 25, 24];
-// agees.sort((a, b) => a - b);
+// agees.sort();
 // let median;
 // const mid = Math.floor(agees.length / 2);
 
@@ -249,23 +208,22 @@ console.log('Max age:', maxAge);  // 26
 
 // Find the average age(all items divided by number of items)
 const agees = [19, 22, 19, 24, 20, 25, 26, 24, 25, 24];
-const mid = Math.floor(agees.length / 2);
+let sum = 0;
+for (let age of agees) {
+  sum += age;
+}
+let average = sum / agees.length;
+console.log(average); // 22.8
 
 // Find the range of the ages(max minus min)
+let maxAge = 26;
+let minAge = 19;
 range = maxAge - minAge
 console.log(range);  // 7
 
-//  .Slice the first ten countries from the countries array
-const countrries = [
-  'Afghanistan',
-  'Albania',
-  'Algeria',
-  'Andorra',
-  'Angola',
-  'Antigua and Barbuda',
-  'Argentina',
-  'Armenia',
-  'Australia',
-  "Nigeria"
-]
+// Compare the value of (min - average) and (max - average), use abs() method 
+let maaxAge = 26;
+let miinAge = 19;
+let difference = Math.abs(maaxAge - miinAge);
+console.log(difference);   // 7
 
