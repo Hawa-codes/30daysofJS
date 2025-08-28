@@ -165,7 +165,7 @@ function printArray(array) {
 }
 printArray([1, 2, 3, 4, 5]);
 
-// no 4 Write a function name showDateTime which shows time in this format: 08/01/2020 04:08 using the Date object.
+// **no 4 Write a function name showDateTime which shows time in this format: 08/01/2020 04:08 using the Date object.
 function showDateTime() {
     const now = new Date();
 
@@ -183,3 +183,46 @@ function showDateTime() {
 
     console.log(`${day}/${month}/${year} ${hours}:${minutes}`);
 }
+
+// no 5 Declare a function name swapValues. This function swaps value of x to y
+function swapValues(x, y) {
+  let temp = x; 
+  x = y;      
+  y = temp;     
+  console.log(x, y);
+}
+swapValues(3, 4) // x => 4, y=>3
+swapValues(4, 5) // x = 5, y = 4
+
+// no 6 Declare a function name reverseArray. It takes array as a parameter and it returns the reverse of the array (don't use method).
+function reverseArray(array) {
+    let reversed = [];              
+  for (let i = array.length - 1; i >= 0; i--) {
+    reversed.push(array[i]);        
+  }
+  return reversed;
+}
+console.log(reverseArray([1, 2, 3, 4, 5]));  // [5, 4, 3, 2, 1]
+console.log(reverseArray(['A', 'B', 'C'])); // ['C', 'B', 'A']
+
+// no 7 Declare a function name capitalizeArray. It takes array as a parameter and it returns the - capitalizedarray
+function capitalizeArray(array) {
+  let capitalizedArray = [];
+  for (let i = 0; i < array.length; i++) {
+    let word = array[i];
+    let capitalizedWord = word.charAt(0).toUpperCase() + word.slice(1);
+    capitalizedArray.push(capitalizedWord);
+  }
+  return capitalizedArray;
+}
+
+console.log(capitalizeArray(["hawa", "amir", "amirah"]));  // ['Hawa', 'Amir', 'Amirah']
+
+// no 8 Declare a function name addItem. It takes an item parameter and it returns an array after adding the item
+function addItem(item) {
+    let arr = [];       
+    arr.push(item);     
+    return arr; 
+}
+console.log(addItem("apple"));
+console.log(addItem(10));

@@ -11,9 +11,9 @@ if (age >= 18) {
 let myAge = prompt('Enter my age:');
 let yourAge = prompt('Enter your age:');
 if (myAge > yourAge) {
-    console.log(`You are ${myAge - yourAge} years older than me`)
+    console.log(`I am ${myAge - yourAge} years older than you`)
 } else if (yourAge > myAge) {
-  console.log(`I am ${yourAge - myAge} years older than me.`);
+  console.log(`You are ${yourAge - myAge} years older than me.`);
 } else {
   console.log("We are the same age!");   // You are 5 years older than me
 }
@@ -39,7 +39,7 @@ if (number % 2 === 0) {
 /*
 Write a code which can give grades to students according to theirs scores:
 80-100, A
-70-89, B
+70-80, B
 60-69, C
 50-59, D
 0-49, F
@@ -49,7 +49,7 @@ switch (true) {
   case grade >= 80 && grade <= 100:
     console.log('A');
     break;
-  case grade >= 70 && grade <= 89:
+  case grade >= 70 && grade <= 79:
     console.log('B');
     break;
   case grade >= 60 && grade <= 69:
@@ -58,7 +58,7 @@ switch (true) {
   case grade >= 50 && grade <= 59:
     console.log('D');
     break;
-  case grade >= 49 && grade < 50:
+  case grade >=0 && grade <= 49:
     console.log('F');
     break;    
   default:
@@ -72,7 +72,7 @@ December, January or February, the season is Winter.
 March, April or May, the season is Spring
 June, July or August, the season is Summer
 */
-let season = '("Enter a month:")';
+let season = prompt("Enter a month:");
 switch (season) {
   case 'September':
   case 'October':
