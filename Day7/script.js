@@ -248,4 +248,349 @@ function sumOfNumbers(numbers) {
 
 console.log(sumOfNumbers([1, 2, 3, 4, 5]));  // 15
 
-// no 11
+// no 11 Declare a function name sumOfOdds. It takes a number parameter and it adds all the odd numbers in that - range.
+function sumOfOdds(n) {
+  let sum = 0;
+  for (let i = 1; i <= n; i++) {
+    if (i % 2 !== 0) {   
+      sum += i;
+    }
+  }
+
+  return sum;
+}
+
+console.log(sumOfOdds(10));  // 1+3+5+7+9 = 25
+console.log(sumOfOdds(7)); 
+
+// no 12 Declare a function name sumOfEven. It takes a number parameter and it adds all the even numbers in that - range.
+function sumOfEven(n) {
+  let sum = 0;
+  for (let i = 1; i <= n; i++) {
+    if (i % 2=== 0) {   
+      sum += i;
+    }
+  }
+  return sum;
+}
+
+console.log(sumOfEven(10));   // 30
+console.log(sumOfEven(7)); // 12
+
+// no 13 Declare a function name evensAndOdds . It takes a positive integer as parameter and it counts number of evens and odds in the number.\
+function evensAndOdds(n) {
+  let evens = 0;
+  let odds = 0;
+  for (let i = 0; i <= n; i++) {
+    if (i % 2 === 0) {
+      evens++;
+    } else {
+      odds++;
+    }
+  }
+  console.log(`The number of evens are ${evens}.`);
+  console.log(`The number of odds are ${odds}.`);
+}
+
+evensAndOdds(100);  
+// The number of evens are 51
+// The number of odds are 50
+
+// no 14  Write a function which takes any number of arguments and return the sum of the arguments
+function sumAll(...args) {
+  let sum = 0;
+  for (let i = 0; i < args.length; i++) {
+    sum += args[i];
+  }
+  return sum;
+}
+
+console.log(sumAll(1, 2, 3));        // 6
+console.log(sumAll(10, 20, 30, 40)); // 100
+console.log(sumAll(5));              // 5
+
+// no 15 Writ a function which generates a randomUserIp.
+function randomUserIp() {
+  let ip = "";
+  for (let i = 0; i < 4; i++) {
+    let num = Math.floor(Math.random() * 256); // 0–255
+    ip += num;
+    if (i < 3) ip += ".";
+  }
+  return ip;
+}
+console.log(randomUserIp()); // 62.217.157.224
+
+// no 16 Write a function which generates a randomMacAddress
+function randomMacAddress() {
+  let mac = "";
+  const hex = "0123456789ABCDEF";
+  for (let i = 0; i < 6; i++) {
+    let pair = hex[Math.floor(Math.random() * 16)] + hex[Math.floor(Math.random() * 16)];
+    mac += pair;
+    if (i < 5) mac += ":";
+  }
+  return mac;
+}
+console.log(randomMacAddress()); // 1D:F5:68:41:16:E2
+
+// no 17 Declare a function name randomHexaNumberGenerator. When this function is called it generates a random hexadecimal number. The function return the hexadecimal number.
+function randomHexaNumberGenerator() {
+  let hex = "#";
+  const chars = "0123456789abcdef";
+  for (let i = 0; i < 6; i++) {
+    hex += chars[Math.floor(Math.random() * 16)];
+  }
+  return hex;
+}
+console.log(randomHexaNumberGenerator()); // #16b784
+
+// no 18 Declare a function name userIdGenerator. When this function is called it generates seven character id. The function return the id.
+function userIdGenerator() {
+  const chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+  let id = "";
+  for (let i = 0; i < 7; i++) {
+    id += chars[Math.floor(Math.random() * chars.length)];
+  }
+  return id;
+}
+
+console.log(userIdGenerator()); 
+
+// Exercises: Level 3
+// no 1 Modify the userIdGenerator function. Declare a function name userIdGeneratedByUser. It doesn’t take any parameter but it takes two inputs using prompt(). One of the input is the number of characters and the second input is the number of ids which are supposed to be generated.
+function userIdGeneratedByUser() {
+  const chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+  let charLength = parseInt(prompt("Enter number of characters per ID:"));
+  let numberOfIds = parseInt(prompt("Enter number of IDs to generate:"));
+
+  let ids = "";
+
+  for (let i = 0; i < numberOfIds; i++) {
+    let id = "";
+    for (let j = 0; j < charLength; j++) {
+      id += chars[Math.floor(Math.random() * chars.length)];
+    }
+    ids += id + "\n"; 
+  }
+
+  return ids;
+}
+console.log(userIdGeneratedByUser());
+
+// no 2 Write a function name rgbColorGenerator and it generates rgb colors.
+function rgbColorGenerator() {
+  let r = Math.floor(Math.random() * 256); 
+  let g = Math.floor(Math.random() * 256); 
+  let b = Math.floor(Math.random() * 256); 
+
+  return `rgb(${r},${g},${b})`;
+}
+console.log(rgbColorGenerator()); // rgb(243,79,205)
+
+// no 3 Write a function arrayOfHexaColors which return any number of hexadecimal colors in an array.
+function arrayOfHexaColors(num) {
+  let colors = [];
+  const hexChars = "0123456789abcdef";
+
+  for (let i = 0; i < num; i++) {
+    let color = "#";
+    for (let j = 0; j < 6; j++) {
+      let randomIndex = Math.floor(Math.random() * hexChars.length);
+      color += hexChars[randomIndex];
+    }
+    colors.push(color);
+  }
+
+  return colors;
+}
+console.log(arrayOfHexaColors(5));
+
+// no 4 Write a function arrayOfRgbColors which return any number of RGB colors in an array.
+function arrayOfRgbColors(num) {
+  let colors = [];
+  for (let i = 0; i < num; i++) {
+    let r = Math.floor(Math.random() * 256); 
+    let g = Math.floor(Math.random() * 256);
+    let b = Math.floor(Math.random() * 256);
+    colors.push(`rgb(${r},${g},${b})`);
+  }
+
+  return colors;
+}
+console.log(arrayOfRgbColors(5));
+
+// no 5 Write a function convertHexaToRgb which converts hexa color to rgb and it returns an rgb color.
+function convertHexaToRgb(hex) {
+  hex = hex.replace("#", "");
+
+  let r = parseInt(hex.substring(0, 2), 16);
+  let g = parseInt(hex.substring(2, 4), 16);
+  let b = parseInt(hex.substring(4, 6), 16);
+
+  return `rgb(${r},${g},${b})`;
+}
+console.log(convertHexaToRgb("#ff5733")); 
+
+// no 6 Write a function convertRgbToHexa which converts rgb to hexa color and it returns an hexa color.
+function convertRgbToHexa(r, g, b) {
+  let red = r.toString(16).padStart(2, "0");
+  let green = g.toString(16).padStart(2, "0");
+  let blue = b.toString(16).padStart(2, "0");
+
+  return `#${red}${green}${blue}`;
+}
+
+console.log(convertRgbToHexa(255, 87, 51));
+
+// no 7 Write a function generateColors which can generate any number of hexa or rgb colors.
+function generateColors(type, num) {
+  let colors = [];
+
+  if (type === 'hexa') {
+    const randomHex = () =>
+      '#' + Math.floor(Math.random() * 0xffffff).toString(16).padStart(6, '0');
+
+    for (let i = 0; i < num; i++) {
+      colors.push(randomHex());
+    }
+
+  } else if (type === 'rgb') {
+    const randomRgb = () => {
+      let r = Math.floor(Math.random() * 256);
+      let g = Math.floor(Math.random() * 256);
+      let b = Math.floor(Math.random() * 256);
+      return `rgb(${r},${g},${b})`;
+    };
+
+    for (let i = 0; i < num; i++) {
+      colors.push(randomRgb());
+    }
+  }
+
+  return num === 1 ? colors[0] : colors;
+}
+
+console.log(generateColors('hexa', 3)) // ['#a3e12f', '#03ed55', '#eb3d2b']
+console.log(generateColors('hexa', 1)) // '#b334ef'
+console.log(generateColors('rgb', 3)) // ['rgb(5, 55, 175)', 'rgb(50, 105, 100)', 'rgb(15, 26, 80)']
+console.log(generateColors('rgb', 1)) // 'rgb(33,79, 176)'
+
+// no 8 Call your function shuffleArray, it takes an array as a parameter and it returns a shuffled array
+function shuffleArray(arr) {
+  return arr.sort(() => Math.random() - 0.5);
+}
+
+console.log(shuffleArray([1, 2, 3, 4, 5]));
+
+// no 9 Call your function factorial, it takes a whole number as a parameter and it return a factorial of the number
+function factorial(n) {
+  if (n < 0) return 'Factorial not defined for negative numbers';
+  if (n === 0) return 1;
+  return n * factorial(n - 1);
+}
+
+console.log(factorial(5));
+
+// no  10 Call your function isEmpty, it takes a parameter and it checks if it is empty or not
+function isEmpty(param) {
+  return param === undefined || param === null || param.length === 0;
+}
+
+console.log(isEmpty([]));
+console.log(isEmpty(''));
+console.log(isEmpty([1, 2]));
+
+// no  11 Call your function sum, it takes any number of arguments and it returns the sum.
+function sum(...args) {
+  return args.reduce((acc, val) => acc + val, 0);
+}
+
+console.log(sum(1, 2, 3, 4, 5));
+
+// no  12 Write a function called sumOfArrayItems, it takes an array parameter and return the sum of all the items. Check if all the array items are number types. If not give return reasonable feedback.
+function sumOfArrayItems(arr) {
+  if (!arr.every(item => typeof item === 'number')) {
+    return 'All items must be numbers';
+  }
+  return arr.reduce((acc, val) => acc + val, 0);
+}
+console.log(sumOfArrayItems([1, 2, 3, 4]));
+
+// no  13 Write a function called average, it takes an array parameter and returns the average of the items. Check if all the array items are number types. If not give return reasonable feedback.
+// 7. average
+function average(arr) {
+  if (!arr.every(item => typeof item === 'number')) {
+    return 'All items must be numbers';
+  }
+  return arr.reduce((acc, val) => acc + val, 0) / arr.length;
+}
+
+console.log(average([1, 2, 3, 4]));
+
+// no  14 Write a function called modifyArray takes array as parameter and modifies the fifth item of the array and return the array. If the array length is less than five it return 'item not found'.
+function modifyArray(arr) {
+  if (arr.length < 5) return 'Not Found';
+  arr[4] = arr[4].toUpperCase();
+  return arr;
+}
+console.log(modifyArray(['Avocado', 'Tomato', 'Potato','Mango', 'Lemon','Carrot']));
+console.log(modifyArray(['Google', 'Facebook','Apple', 'Amazon','Microsoft',  'IBM']));
+console.log(modifyArray(['Google', 'Facebook','Apple', 'Amazon']));
+
+// no  15 Write a function called isPrime, which checks if a number is prime number.
+function isPrime(num) {
+  if (num <= 1) return false;
+  for (let i = 2; i <= Math.sqrt(num); i++) {
+    if (num % i === 0) return false;
+  }
+  return true;
+}
+
+console.log(isPrime(7));
+console.log(isPrime(10));
+
+// no  16 Write a functions which checks if all items are unique in the array.
+function allUnique(arr) {
+  return new Set(arr).size === arr.length;
+}
+
+console.log(allUnique([1,2,3,4]));
+console.log(allUnique([1,2,2,3]));
+
+// no  17 Write a function which checks if all the items of the array are the same data type.
+function sameDataType(arr) {
+  return arr.every(item => typeof item === typeof arr[0]);
+}
+console.log(sameDataType([1, 2, 3]));
+console.log(sameDataType([1, 'a', true]));
+
+// **no  18 JavaScript variable name does not support special characters or symbols except $ or _. Write a function isValidVariable which check if a variable is valid or invalid variable.
+function isValidVariable(name) {
+  const valid = /^[a-zA-Z_$][a-zA-Z0-9_$]*$/;
+  return valid.test(name);
+}
+console.log(isValidVariable('firstName')); // true
+console.log(isValidVariable('1name'));  // false
+console.log(isValidVariable('_name'));  // true
+
+// no  19 Write a function which returns array of seven random numbers in a range of 0-9. All the numbers must be unique.
+function sevenRandomNumbers() {
+  let nums = new Set();
+  while (nums.size < 7) {
+    nums.add(Math.floor(Math.random() * 10));
+  }
+  return Array.from(nums);
+}
+
+console.log(sevenRandomNumbers()); // [2, 9, 7, 5, 8, 0, 3]
+// sevenRandomNumbers()
+// [(1, 4, 5, 7, 9, 8, 0)]
+
+// no  20 Write a function called reverseCountries, it takes countries array and first it copy the array and returns the reverse of the original array
+function reverseCountries(countries) {
+  return [...countries].reverse();
+}
+
+console.log(reverseCountries(['Nigeria', 'Ghana', 'Kenya', 'Egypt'])); // ['Egypt', 'Kenya', 'Ghana', 'Nigeria']
+
