@@ -432,7 +432,7 @@ function convertHexaToRgb(hex) {
 }
 console.log(convertHexaToRgb("#ff5733")); 
 
-// no 6 Write a function convertRgbToHexa which converts rgb to hexa color and it returns an hexa color.
+// **no 6 Write a function convertRgbToHexa which converts rgb to hexa color and it returns an hexa color.
 function convertRgbToHexa(r, g, b) {
   let red = r.toString(16).padStart(2, "0");
   let green = g.toString(16).padStart(2, "0");
@@ -517,8 +517,7 @@ function sumOfArrayItems(arr) {
 }
 console.log(sumOfArrayItems([1, 2, 3, 4]));
 
-// no  13 Write a function called average, it takes an array parameter and returns the average of the items. Check if all the array items are number types. If not give return reasonable feedback.
-// 7. average
+// **no  13 Write a function called average, it takes an array parameter and returns the average of the items. Check if all the array items are number types. If not give return reasonable feedback.
 function average(arr) {
   if (!arr.every(item => typeof item === 'number')) {
     return 'All items must be numbers';
