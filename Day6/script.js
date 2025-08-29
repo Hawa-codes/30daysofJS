@@ -303,3 +303,111 @@ for (let i = 1; i < countries.length; i++) {
   }
 }
 console.log(five); // ['Japan', 'Kenya']
+
+// no 11 Find the longest word in the webTechs array
+const webTechs = [
+  'HTML',
+  'CSS',
+  'JavaScript',
+  'React',
+  'Redux',
+  'Node',
+  'MongoDB'
+]
+let longeest = webTechs[0]; 
+
+for (let i = 1; i < webTechs.length; i++) {
+  if (webTechs[i].length > longeest.length) {
+    longeest = webTechs[i]; 
+  }
+}
+console.log(longeest);  // JavaScript 
+
+// no 12 Use the webTechs array to create the following array of arrays:
+const webTechsArr = [];
+for (let i = 0; i < webTechs.length; i++) {
+  let  name = webTechs[i];
+  let number = name.length;
+  webTechsArr.push([name, number]);
+}
+console.log(webTechsArr);
+
+// no 13 An application created using MongoDB, Express, React and Node is called a MERN stack app. Create the acronym MERN by using the array mernStack
+const application = ['MongoDB', 'Express', 'React', 'Node'];
+const acro = [];
+for (let i = 0; i < application.length; i++) {
+  let  name = application[i];
+  let firstLet = name.slice(0,1).toUpperCase();
+  acro.push([firstLet])
+}
+console.log(acro.join('')); // MERN
+
+// no 14 Iterate through the array, ["HTML", "CSS", "JS", "React", "Redux", "Node", "Express", "MongoDB"] using a for loop or for of loop and print out the items.
+const app = ["HTML", "CSS", "JS", "React", "Redux", "Node", "Express", "MongoDB"];
+const priint = []
+for (let i = 0; i < app.length; i++) {
+  priint.push(app[i]);
+}
+console.log(priint.join(', ')); // HTML, CSS, JS, React, Redux, Node, Express, MongoDB
+
+// for of
+for (const appl of app) {
+  console.log(app.join(', ')); // HTML, CSS, JS, React, Redux, Node, Express, MongoDB
+}
+
+
+// no 15 This is a fruit array , ['banana', 'orange', 'mango', 'lemon'] reverse the order using loop without using a reverse method.
+let fruit = ['banana', 'orange', 'mango', 'lemon'];
+let reverse = [];
+for (let i = fruit.length - 1; i >= 0; i--) {
+  reverse.push(fruit[i]);
+}
+console.log(reverse); // ['lemon', 'mango', 'orange', 'banana']
+
+// no 16 Print all the elements of array as shown below.
+const fullStack = [
+['HTML', 'CSS', 'JS', 'React'],
+['Node', 'Express', 'MongoDB']
+];
+
+for (let i = 0; i < fullStack.length; i++) {
+  for (let j = 0; j < fullStack[i].length; j++) {
+    console.log(fullStack[i][j].toUpperCase());
+  }
+}
+
+// Exercises: Level 3
+// no 1 Copy countries array(Avoid mutation)
+const counntries = [
+  'Albania',
+  'Bolivia',
+  'Canada',
+  'Denmark',
+  'Ethiopia',
+  'Finland',
+  'Germany',
+  'Hungary',
+  'Ireland',
+  'Japan',
+  'Kenya'
+]
+
+// no 2 Arrays are mutable. Create a copy of array which does not modify the original. Sort the copied array and store in a variable sortedCountries
+const sortedCounntries = counntries.sort();
+
+console.log(counntries);        
+console.log(sortedCounntries);
+
+// no 3 Sort the webTechs array and mernStack array
+const webbTechs = [
+  'HTML',
+  'CSS',
+  'JavaScript',
+  'React',
+  'Redux',
+  'Node',
+  'MongoDB'
+]
+const sortedWebTechs = webTechs.sort();
+console.log(webbTechs); // ['HTML', 'CSS', 'JavaScript', 'React', 'Redux', 'Node', 'MongoDB']
+console.log(sortedWebTechs)  // ['CSS', 'HTML', 'JavaScript', 'MongoDB', 'Node', 'React', 'Redux']
