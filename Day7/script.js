@@ -48,7 +48,7 @@ console.log(areaOfCircle(2)); // 12.566370614359172
 
 // no 8 Circumference of a circle is calculated as follows: circumference = 2πr. Write a function which calculates circumOfCircle
 function circumOfCircle(r) {
-    return  2 *Math.PI * r
+    return  2 * Math.PI * r
 }
 console.log(areaOfCircle(3));  // 28.274333882308138
 
@@ -220,9 +220,32 @@ console.log(capitalizeArray(["hawa", "amir", "amirah"]));  // ['Hawa', 'Amir', '
 
 // no 8 Declare a function name addItem. It takes an item parameter and it returns an array after adding the item
 function addItem(item) {
-    let arr = [];       
-    arr.push(item);     
+    let arr = []; 
+    arr.push(item); 
     return arr; 
 }
-console.log(addItem("apple"));
-console.log(addItem(10));
+console.log(addItem("apple"));  // ["apple"]
+console.log(addItem(10));  // [10]
+
+
+// no 9 Declare a function name removeItem. It takes an index parameter and it returns an array after removing an item
+function removeItem(index) {
+let arr = ["apple", "banana", "mango", "orange"];
+  arr.splice(index, 1);  
+  return arr;
+}
+console.log(removeItem(0));  // ['banana', 'mango', 'orange']
+console.log(removeItem(2));  // ['apple', 'banana', 'orange']
+
+// no 10 Declare a function name sumOfNumbers. It takes a number parameter and it adds all the numbers in that range.
+function sumOfNumbers(numbers) {
+  let sum = 0;
+  for (let i = 0; i < numbers.length; i++) {
+    sum += numbers[i];
+  }
+  return sum;
+}
+
+console.log(sumOfNumbers([1, 2, 3, 4, 5]));  // 15
+
+// no 11
