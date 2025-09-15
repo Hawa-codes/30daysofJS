@@ -71,22 +71,22 @@ for (let i = 0; i < n; i++){
 }
 
 // declaring an array variable
-const names = ['Asabeneh', 'Mathias', 'Elias', 'Brook']
+const nammes = ['Asabeneh', 'Mathias', 'Elias', 'Brook']
 
 // iterating an array using regular for loop
-let len = names.length;
+let len = nammes.length;
 for(let i = 0; i < len; i++){
-    console.log(names[i].toUpperCase())
+    console.log(nammes[i].toUpperCase())
 }
 
 
 // iterating an array using for of
-for( const name of names) {
+for( const name of nammes) {
     console.log(name.toUpperCase())
 }
 
 // iterating array using forEach 
-names.forEach((name) => name.toUpperCase())
+nammes.forEach((name) => name.toUpperCase())
 
 
 const person = {
