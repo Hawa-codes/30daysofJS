@@ -12,15 +12,18 @@ document.body.style.fontFamily = 'Arial, sans-serif'
 const h1 = document.querySelector('h1')
 h1.style.fontSize = '40px'
 h1.style.letterSpacing = '7px'; 
-
+h1.style.marginBottom ='-10px'
 
 const h4 = document.querySelector('h4')
 h4.style.fontSize = '15px'
-
-const p = document.querySelector('p')
-p.style.fontSize = '10px'
-p.style.color = '#808080' 
-
+h4.style.marginBottom ='-10px'
+const paragraphs = document.querySelectorAll('p');
+paragraphs.forEach(p => {
+  p.style.fontSize = '10px';
+  p.style.color = '#808080';
+  p.style.textDecoration = 'underline'
+  p.style.marginBottom ='-10px'
+});
 
 const countries = [
   "Afghanistan",
@@ -220,12 +223,24 @@ const countries = [
 ];
 
 
-const container = document.querySelector('#countries-container')
+const container = document.getElementById('countries-container')
+container.style.display = 'grid';
+container.style.gridTemplateColumns = 'repeat(6, 1fr)'; 
+container.style.gap = '10px';
+container.style.marginTop = '40px'
+
 countries.forEach(name => {
   const div = document.createElement('div')
   div.textContent = name
-  div.style.border = '1px solid #ccc'
-  div.style.padding = '8px'
-  div.style.margin = '4px'
+  div.style.backgroundColor = '#ffffff';
+  div.style.border = '1px solid #eae9e9';
+  div.style.padding = '10px';
+  div.style.fontSize = '10px';
+  div.style.display = 'flex';
+  div.style.alignItems = 'center';   
+  div.style.justifyContent = 'center'; 
+  div.style.height = '70px'; 
+  div.style.boxShadow = '3px 3px 8px rgba(0, 0, 0, 0.2)'; 
+  div.style.boxSizing = 'border-box';
   container.appendChild(div)
 })
