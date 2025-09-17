@@ -2,12 +2,11 @@ document.body.style.textAlign = 'center'
 document.body.style.fontFamily = 'Arial, sans-serif'
 document.body.style.margin = '30px'
 
-// Wrapper for headings + controls
+// Wrapper for headings + controls + container
 const wrapper = document.createElement('div')
 wrapper.className = 'wrapper'
 document.body.appendChild(wrapper)
 
-// Headings
 const h1 = document.createElement('h1')
 h1.innerHTML = 'Number Generator'
 h1.style.color = '#5bbc7a'
@@ -34,14 +33,12 @@ const button = document.querySelector('#generateBtn')
 wrapper.appendChild(input)
 wrapper.appendChild(button)
 
-// style input
 input.style.width = '300px'
 input.style.height = '20px'
 input.style.padding = '10px'
 input.style.margin = '10px'
 input.style.border = '1px solid #5bbc7a'
 
-// style button
 button.style.backgroundColor = '#5bbc7a'
 button.style.color = 'white'
 button.style.padding = '10px 17px'
@@ -50,15 +47,15 @@ button.style.border = 'none'
 button.style.cursor = 'pointer'
 button.style.fontWeight = 'bold'
 
-// container for numbers (still outside wrapper so it fills width)
 const container = document.getElementById('container')
+wrapper.appendChild(container)
+
 container.style.display = 'grid'
 container.style.gridTemplateColumns = 'repeat(6, 80px)'
 container.style.gap = '7px'
 container.style.alignItems = 'center'
 container.style.justifyContent = 'center'
 
-// prime checker
 function isPrime(num) {
   if (num < 2) return false
   for (let i = 2; i <= Math.sqrt(num); i++) {
@@ -67,17 +64,16 @@ function isPrime(num) {
   return true
 }
 
-// button click
 button.addEventListener('click', () => {
   const n = parseInt(input.value, 10)
-  container.innerHTML = '' // clear old numbers
+  container.innerHTML = '' 
 
   if (isNaN(n) || n < 0) {
     alert('Please enter a valid number (0 or above)')
     return
   }
 
-  for (let i = 0; i <= n; i++) {
+  for (let i = 1; i <= n; i++) {
     const numBox = document.createElement('div')
     numBox.textContent = i
     numBox.style.padding = '20px'
