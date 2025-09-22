@@ -51,7 +51,7 @@ h1 {
     background-color: #f2a93b;
     color: #ffffff;
     border: none;
-    padding: 10px 20px;
+    padding: 10px 18px;
 }
 
 .buttons p {
@@ -60,5 +60,15 @@ h1 {
 }
 
 .main {
-
+    width: 100%;
+    background-color: #f0efef;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 3rem 0;
+}
+.name {
+    height: max-content;
+    width: 100%;
+    color: #565657;
 }
