@@ -47,7 +47,7 @@ h1 {
     margin-bottom: 10px;
 }
 
-.population-btn, .lang-btn {
+.lang-btn, .population-btn {
     background-color: #f2a93b;
     color: #ffffff;
     border: none;
