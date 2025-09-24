@@ -2257,4 +2257,195 @@ const countries_data = [
   },
 ];
 
-// const count = countries
+let totalPopulation = 0;
+for (const p of countries_data) {
+  totalPopulation += p.population;
+}
+
+//Language filter
+let langs = [];
+countries_data.map((n) => {
+  for (const c of n.languages) {
+    const langExist = langs.find((d) => d.country === c);
+    const langIndex = langs.findIndex((d) => d.country === c);
+    if (langExist) {
+      langs.splice(langIndex, 1, { ...langExist, count: langExist.count + 1 });
+    } else {
+      langs.push({ country: c, count: 1 });
+    }
+  }
+});
+
+langs.sort((a, b) => {
+  if (a.count > b.count) return -1;
+  if (a.count < b.count) return 1;
+  return 0;
+});
+let tenlang = langs.slice(0, 10);
+
+//total language
+let totalLang = 0;
+for (const t of tenlang) {
+  totalLang += t.count;
+}
+
+//sorting form largest to smallest
+let countrySort = countries_data.sort((a, b) => {
+  if (a.population > b.population) return -1;
+  if (a.population < b.population) return 1;
+  return 0;
+});
+
+// showing the first 10
+let firstTen = countrySort.slice(0, 10);
+
+// for new object with the total
+let newArr = [{ name: "World", population: totalPopulation }];
+for (const f of firstTen) {
+  let newObj = { name: f.name, population: f.population };
+  newArr.push(newObj);
+}
+
+//Selectors
+const info = document.querySelector(".btns");
+const pop = document.querySelector(".population-btn");
+const lang = document.querySelector(".lang-btn");
+const py = document.querySelector(".p");
+const main = document.querySelector(".main");
+const names = document.querySelector(".name");
+const charts = document.querySelector(".charts");
+const figures = document.querySelector(".figures");
+
+//the default view
+py.textContent = "10 Most populate countries in the world";
+for (const n of newArr) {
+  const p = document.createElement("p");
+  const p1 = document.createElement("p");
+  p1.textContent = n.name;
+  p1.style.height = "auto";
+  p1.style.display = "flex";
+  p1.style.width = "15rem";
+  p1.style.alignItems = "center";
+  p1.style.justifyContent = "start";
+  // p1.style.textAlign = "center";
+  p.appendChild(p1);
+
+  const ptab = document.createElement("p");
+  const p2 = document.createElement("p");
+  p2.style.height = "1.8rem";
+  p2.style.width = (n.population / totalPopulation) * 100 + "%";
+  p2.style.display = "flex";
+  p2.style.background = "#f2a93b";
+  p2.style.alignItems = "center";
+  //   p2.style.margin = "0 0.4rem";
+  ptab.appendChild(p2);
+  p.appendChild(ptab);
+  ptab.style.width = "40%";
+
+  const p3 = document.createElement("p");
+  p3.textContent = n.population;
+  p3.style.height = "1.8rem";
+  p3.style.width = "10rem";
+  p3.style.display = "flex";
+  p3.style.alignItems = "center";
+  // p3.style.marginLeft = "0.2rem";
+  p.appendChild(p3);
+  p.style.gap = "0.3rem";
+  p.style.width = "100vw";
+  p.style.display = "flex";
+  p.style.justifyContent = "center";
+  p.style.marginBottom = "0.2rem";
+  names.appendChild(p);
+}
+
+//event listeners
+pop.addEventListener("click", () => {
+  py.textContent = "";
+  py.textContent = "10 Most populated countries in the world";
+  names.innerHTML = "";
+  for (const n of newArr) {
+    const p = document.createElement("p");
+    const p1 = document.createElement("p");
+    p1.textContent = n.name;
+    p1.style.height = "auto";
+    p1.style.display = "flex";
+    p1.style.width = "15rem";
+    p1.style.alignItems = "center";
+    p1.style.justifyContent = "start";
+    // p1.style.textAlign = "center";
+    p.appendChild(p1);
+
+    const ptab = document.createElement("p");
+    const p2 = document.createElement("p");
+    p2.style.height = "1.8rem";
+    p2.style.width = (n.population / totalPopulation) * 100 + "%";
+    p2.style.display = "flex";
+    p2.style.background = "#f2a93b";
+    p2.style.alignItems = "center";
+    //   p2.style.margin = "0 0.4rem";
+    ptab.appendChild(p2);
+    p.appendChild(ptab);
+    ptab.style.width = "40%";
+
+    const p3 = document.createElement("p");
+    p3.textContent = n.population;
+    p3.style.height = "1.8rem";
+    p3.style.width = "10rem";
+    p3.style.display = "flex";
+    p3.style.alignItems = "center";
+    // p3.style.marginLeft = "0.2rem";
+    p.appendChild(p3);
+    p.style.gap = "0.3rem";
+    p.style.width = "100vw";
+    p.style.display = "flex";
+    p.style.justifyContent = "center";
+    p.style.marginBottom = "0.2rem";
+    names.appendChild(p);
+  }
+});
+
+// lang.addEventListener("click", LanguageView());
+lang.addEventListener("click", () => {
+  py.textContent = "";
+  py.textContent = "10 Most spoken languages in the world";
+  names.textContent = "";
+  for (const n of tenlang) {
+    const p = document.createElement("p");
+    const p1 = document.createElement("p");
+    p1.textContent = n.country;
+    p1.style.height = "auto";
+    p1.style.display = "flex";
+    p1.style.width = "15rem";
+    p1.style.alignItems = "center";
+    p1.style.justifyContent = "start";
+    // p1.style.textAlign = "center";
+    p.appendChild(p1);
+
+    const ptab = document.createElement("p");
+    const p2 = document.createElement("p");
+    p2.style.height = "1.8rem";
+    p2.style.width = (n.count / totalLang) * 100 + "%";
+    p2.style.display = "flex";
+    p2.style.background = "#f2a93b";
+    p2.style.alignItems = "center";
+    //   p2.style.margin = "0 0.4rem";
+    ptab.appendChild(p2);
+    p.appendChild(ptab);
+    ptab.style.width = "40%";
+
+    const p3 = document.createElement("p");
+    p3.textContent = n.count;
+    p3.style.height = "1.8rem";
+    p3.style.width = "10rem";
+    p3.style.display = "flex";
+    p3.style.alignItems = "center";
+    // p3.style.marginLeft = "0.2rem";
+    p.appendChild(p3);
+    p.style.gap = "0.3rem";
+    p.style.width = "100vw";
+    p.style.display = "flex";
+    p.style.justifyContent = "center";
+    p.style.marginBottom = "0.2rem";
+    names.appendChild(p);
+  }
+});
