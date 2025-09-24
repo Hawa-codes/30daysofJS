@@ -45,10 +45,43 @@ body {
     font-weight: bold;
 }
 
-.stw, .search, .order {
+.stw, .search {
     background-color: #895be6;
     color: #ffffff;
     padding: 15px 20px;
     border: none;
-    border-radius: 5px;
+    border-radius: 7px;
+    font-weight: 500;
+}
+
+.order {
+    background-color: #895be6;
+    color: #ffffff;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    border: none;
+    border-radius: 7px;
+}
+
+.order p {
+    font-size: 10px;
+}
+
+.input {
+    margin-top: 1rem;
+}
+
+input {
+    border-radius: 10px;
+    /* padding:px 23px; */
+    width: 30rem;
+    background-color: #ffffff;
+    color: black;
+}
+
+.search-btn {
+    width: 20px;
+    height: 20px;
 }
