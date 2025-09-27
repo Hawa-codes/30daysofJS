@@ -61,3 +61,7 @@ p {
 .boxs:hover {
     background-color: #eddfde;
 }
+
+main span {
+    font-size: 20px;
+}
