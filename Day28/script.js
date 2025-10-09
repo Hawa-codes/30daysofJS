@@ -1,13 +1,10 @@
-
-//querySelector
-
 const firstname = document.querySelector(".firstname");
 const lastname = document.querySelector(".lastname");
 const country = document.querySelector(".country");
 const score = document.querySelector(".score");
 const add = document.querySelector(".add");
 const req = document.querySelector(".red");
-const contents = document.querySelector(".contents");
+const contents = document.querySelector(".main");
 const names = document.querySelector(".names");
 const time = document.querySelector(".time");
 const ctry = document.querySelector(".ctry");
