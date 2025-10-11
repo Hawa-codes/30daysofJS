@@ -11,10 +11,10 @@ document.getElementById('myForm').addEventListener('submit', function(e) {
   const message = document.getElementById('message');
 
   // Regex patterns
-  const nameRegex = /^[A-Za-z\s]+$/;                    // Only letters & spaces
-  const emailRegex = /^[\w.-]+@[a-zA-Z\d.-]+\.[a-zA-Z]{2,}$/;  // Standard email
-  const phoneRegex = /^0\d{10}$/;                       // Nigerian phone format (11 digits, starts with 0)
-  const passwordRegex = /^(?=.*[A-Z])(?=.*\d).{8,}$/;   // 8+ chars, 1 uppercase, 1 number
+  const nameRegex = /^[A-Za-z\s]+$/;                    
+  const emailRegex = /^[\w.-]+@[a-zA-Z\d.-]+\.[a-zA-Z]{2,}$/;  
+  const phoneRegex = /^0\d{10}$/;                      
+  const passwordRegex = /^(?=.*[A-Z])(?=.*\d).{8,}$/;   
 
   // Validation logic
   let valid = true;
@@ -36,7 +36,6 @@ document.getElementById('myForm').addEventListener('submit', function(e) {
   checkInput(phone, phoneRegex);
   checkInput(password, passwordRegex);
 
-  // Bio is optional but at least 5 chars
   if (bio.value.trim().length >= 5) {
     bio.classList.add('valid');
     bio.classList.remove('invalid');
@@ -46,7 +45,6 @@ document.getElementById('myForm').addEventListener('submit', function(e) {
     valid = false;
   }
 
-  // Final message
   if (valid) {
     message.textContent = "✅ Form submitted successfully!";
     message.style.color = "green";
