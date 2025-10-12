@@ -1,6 +1,5 @@
-// Validate the following form using regex
 document.getElementById('myForm').addEventListener('submit', function(e) {
-  e.preventDefault(); // Prevent form submission
+  e.preventDefault();
 
   const firstName = document.getElementById('firstName');
   const lastName = document.getElementById('lastName');
@@ -10,13 +9,11 @@ document.getElementById('myForm').addEventListener('submit', function(e) {
   const bio = document.getElementById('bio');
   const message = document.getElementById('message');
 
-  // Regex patterns
   const nameRegex = /^[A-Za-z\s]+$/;                    
   const emailRegex = /^[\w.-]+@[a-zA-Z\d.-]+\.[a-zA-Z]{2,}$/;  
   const phoneRegex = /^0\d{10}$/;                      
   const passwordRegex = /^(?=.*[A-Z])(?=.*\d).{8,}$/;   
 
-  // Validation logic
   let valid = true;
 
   function checkInput(input, regex) {
