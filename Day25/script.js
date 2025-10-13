@@ -2262,7 +2262,7 @@ for (const p of countries_data) {
   totalPopulation += p.population;
 }
 
-//Language filter
+
 let langs = [];
 countries_data.map((n) => {
   for (const c of n.languages) {
@@ -2283,30 +2283,25 @@ langs.sort((a, b) => {
 });
 let tenlang = langs.slice(0, 10);
 
-//total language
 let totalLang = 0;
 for (const t of tenlang) {
   totalLang += t.count;
 }
 
-//sorting form largest to smallest
 let countrySort = countries_data.sort((a, b) => {
   if (a.population > b.population) return -1;
   if (a.population < b.population) return 1;
   return 0;
 });
 
-// showing the first 10
 let firstTen = countrySort.slice(0, 10);
 
-// for new object with the total
 let newArr = [{ name: "World", population: totalPopulation }];
 for (const f of firstTen) {
   let newObj = { name: f.name, population: f.population };
   newArr.push(newObj);
 }
 
-//Selectors
 const info = document.querySelector(".btns");
 const pop = document.querySelector(".population-btn");
 const lang = document.querySelector(".lang-btn");
