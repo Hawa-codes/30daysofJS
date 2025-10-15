@@ -27,6 +27,15 @@ document.getElementById('myForm').addEventListener('submit', function(e) {
     }
   }
 
+  if (valid) {
+    message.textContent = "✅ Form submitted successfully!";
+    message.style.color = "green";
+  } else {
+    message.textContent = "❌ Please.";
+    message.style.color = "red";
+  }
+});
+
   checkInput(firstName, nameRegex);
   checkInput(lastName, nameRegex);
   checkInput(email, emailRegex);
