@@ -57,5 +57,4 @@ document.getElementById('myForm').addEventListener('submit', function(e) {
   } else {
     message.textContent = "❌ Please fix the highlighted errors.";
     message.style.color = "red";
-  }
-});
+  };
