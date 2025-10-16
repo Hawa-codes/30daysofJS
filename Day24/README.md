@@ -16,7 +16,9 @@ Single Page
 - JavaScript
 
 ## Demo
-[Preview Here](./img/Screenshot%202025-10-16%20233527.png)
+[Preview Here](https://rawcdn.githack.com/Hawa-codes/30daysofJS/refs/heads/main/Day24/index.html)
+
+![screenshot](./img/Screenshot%202025-10-16%20233527.png)
 
 ## Contact
 If you want to contact me you can reach me at
